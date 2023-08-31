@@ -1,6 +1,9 @@
-﻿namespace veeb.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace veeb.Controllers
 {
-    public class ProductController
+    public class ProductController : ControllerBase
     {
+
     }
 }
