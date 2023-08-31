@@ -30,20 +30,7 @@ namespace orm.Controllers
             return _context.Articles.ToList();
         }
 
-        [HttpDelete("{id}")]
-        public List<Article> DeleteArtikkel(int id)
-        {
-            var artikkel = _context.Articles.Find(id);
-
-            if (artikkel == null)
-            {
-                return _context.Articles.ToList();
-            }
-
-            _context.Articles.Remove(artikkel);
-            _context.SaveChanges();
-            return _context.Articles.ToList();
-        }
+        
 
         [HttpDelete("/kustuta2/{id}")]
         public IActionResult DeleteArtikkel2(int id)
