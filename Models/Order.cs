@@ -7,6 +7,6 @@
         public double TotalSum { get; set; }
         public bool Paid { get; set; }
         public ICollection<CartProduct> CartProduct { get; set; }
-        public Person Person { get; set; }
+        public int PersonId { get; set; }
     }
 }

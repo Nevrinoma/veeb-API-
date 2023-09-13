@@ -79,6 +79,7 @@ namespace veeb.Controllers
             person.Password= updatedPerson.Password;
             person.Admin= updatedPerson.Admin;
 
+            _context.Persons.Update(person);
             _context.SaveChanges();
 
             return Ok(_context.Authors);
