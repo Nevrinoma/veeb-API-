@@ -39,10 +39,9 @@ function App() {
             </div>
           ) : (
             <div>
-              <h2>TEST</h2>
               {selectedValue !== null && (
                 <div>
-                  <p>Вы выбрали: {selectedValue}</p>
+                  <label>Вы выбрали: {selectedValue}</label>
                 </div>
               )}
             </div>
@@ -51,18 +50,21 @@ function App() {
       </form>
       {isTest && (
         <div>
-          <h2>TEST</h2>
           {selectedValue !== null && (
+            
             <div>
+              <EquationGenerator onGenerateEquation={addEquation} />
               <p>Вы выбрали: {selectedValue}</p>
             </div>
           )}
+          
           <div className="equations">
             {equations.map((equation, index) => (
               <Equation key={index} equation={equation} />
             ))}
           </div>
-          <EquationGenerator onGenerateEquation={addEquation} />
+
+          
         </div>
       )}
     </div>
